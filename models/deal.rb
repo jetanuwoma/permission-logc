@@ -6,3 +6,4 @@ class Deal
     @owner_id = deal_struct.ownerUserId
   end
 end
+

@@ -7,11 +7,5 @@ client = HubspotClient.new
 # Initialize PermissionsProcessor with the client
 processor = PermissionsProcessor.new(client)
 
-# Process permissions and get results
-results = processor.process
-
-# Post results back to the API
-response = client.post_results(results)
-
-# Output the response to verify success
-puts response
+# Process permissions and post results
+processor.process

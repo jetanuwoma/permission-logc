@@ -17,7 +17,19 @@ class User
     edit_permission == 'ALL'
   end
 
-  def owned_or_team_permission?(permission_type)
-    permission_type == 'OWNED_OR_TEAM'
+  def can_view_owned_or_team?
+    view_permission == 'OWNED_OR_TEAM'
+  end
+
+  def can_edit_owned_or_team?
+    edit_permission == 'OWNED_OR_TEAM'
+  end
+
+  def can_view_owned_only?
+    view_permission == 'OWNED_ONLY'
+  end
+
+  def can_edit_owned_only?
+    edit_permission == 'OWNED_ONLY'
   end
 end
